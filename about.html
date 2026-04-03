@@ -1,0 +1,302 @@
+﻿<!DOCTYPE html>
+
+<html class="dark overflow-x-hidden overscroll-x-none" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            colors: {
+              "on-tertiary": "#173059",
+              "secondary-container": "#474747",
+              "tertiary-fixed-dim": "#b0c6f9",
+              "error": "#ffb4ab",
+              "surface-bright": "#393939",
+              "error-container": "#93000a",
+              "on-error-container": "#ffdad6",
+              "outline-variant": "#4e4639",
+              "on-tertiary-fixed-variant": "#304671",
+              "background": "#131313",
+              "on-tertiary-container": "#233a65",
+              "on-tertiary-fixed": "#001a41",
+              "tertiary-container": "#8fa5d6",
+              "surface": "#131313",
+              "tertiary-fixed": "#d8e2ff",
+              "inverse-primary": "#775a19",
+              "secondary": "#c8c6c5",
+              "on-error": "#690005",
+              "surface-tint": "#e9c176",
+              "primary": "#e9c176",
+              "on-surface": "#e5e2e1",
+              "outline": "#9a8f80",
+              "on-secondary": "#303030",
+              "inverse-on-surface": "#313030",
+              "inverse-surface": "#e5e2e1",
+              "tertiary": "#b0c6f9",
+              "surface-container-lowest": "#0e0e0e",
+              "on-primary-fixed": "#261900",
+              "secondary-fixed-dim": "#c8c6c5",
+              "on-primary-fixed-variant": "#5d4201",
+              "surface-container-high": "#2a2a2a",
+              "surface-container-low": "#1c1b1b",
+              "surface-variant": "#353534",
+              "primary-fixed-dim": "#e9c176",
+              "secondary-fixed": "#e4e2e1",
+              "on-secondary-fixed": "#1b1c1c",
+              "on-primary": "#412d00",
+              "surface-container": "#201f1f",
+              "on-primary-container": "#4e3700",
+              "primary-container": "#c5a059",
+              "on-surface-variant": "#d1c5b4",
+              "on-secondary-container": "#b6b5b4",
+              "primary-fixed": "#ffdea5",
+              "on-background": "#e5e2e1",
+              "surface-dim": "#131313",
+              "surface-container-highest": "#353534"
+            },
+            fontFamily: {
+              "headline": ["Noto Serif"],
+              "body": ["Manrope"],
+              "label": ["Manrope"]
+            },
+            borderRadius: {"DEFAULT": "0.125rem", "lg": "0.25rem", "xl": "0.5rem", "full": "0.75rem"},
+          },
+        },
+      }
+    </script>
+<style>
+      .material-symbols-outlined {
+        font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+      }
+      html, body { margin: 0; width: 100%; overflow-x: hidden; }
+      details > summary { list-style: none; }
+      details > summary::-webkit-details-marker { display: none; }
+      .bg-hero-gradient {
+        background: linear-gradient(to bottom, rgba(19,19,19,0.4), rgba(19,19,19,1)), url('assets/taxi-sur-la-tour-eiffel-paris.jpg');
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+</head>
+<body class="bg-background text-on-surface font-body selection:bg-primary/30 pb-0 m-0 w-full overflow-x-hidden overscroll-x-none">
+<!-- Top Navigation Bar -->
+<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-3 md:py-4 max-w-full mx-auto shadow-[0_10px_40px_rgba(233,193,118,0.04)]">
+<div class="flex items-center">
+<a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-2xl md:text-3xl leading-none text-glow" href="index.html">VTC PARIS</a>
+</div>
+<div class="hidden md:flex gap-10">
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="index.html">Home</a>
+<a class="font-noto-serif italic tracking-wide text-amber-200 border-b border-amber-200/30 pb-1 transition-all duration-500 ease-in-out" href="about.html">About</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="services.html">Services</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="https://groupebluevanparis.com/rates/en">Our Rates</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="https://groupebluevanparis.com/our_fleets/en">Our Fleets</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="faq.html">FAQ</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="contact.html">Contact</a>
+</div>
+<div class="md:hidden flex items-center gap-2">
+<a class="inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-semibold px-4 py-2 rounded shadow-lg hover:opacity-90 transition-opacity" href="contact.html">Book Now</a>
+<details class="relative">
+<summary aria-label="Open menu" class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-800/60 bg-neutral-900/80 text-neutral-200 hover:text-amber-200 hover:bg-neutral-900 transition-colors cursor-pointer">
+<span class="material-symbols-outlined text-[20px]">menu</span>
+</summary>
+<div class="absolute right-0 mt-2 w-48 rounded-xl border border-neutral-800/60 bg-neutral-950/95 backdrop-blur-xl shadow-[0_18px_60px_rgba(0,0,0,0.55)] p-2">
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="index.html">Home</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="about.html">About</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="services.html">Services</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="https://groupebluevanparis.com/rates/en">Our Rates</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="https://groupebluevanparis.com/our_fleets/en">Our Fleets</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="faq.html">FAQ</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
+</div>
+</details>
+</div>
+<a class="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-semibold px-8 py-2.5 rounded shadow-lg hover:scale-105 duration-500 transition-all" href="contact.html">
+            Book Now
+        </a>
+</nav>
+<main>
+<!-- Hero Section: Editorial Header -->
+<section class="relative h-[716px] flex items-center px-5 md:px-12 pt-24 overflow-hidden">
+<div class="absolute inset-0 z-0 bg-hero-gradient" data-alt="Cinematic wide shot of Paris at night with warm golden street lights reflecting on the wet cobblestone streets and dark luxury sedan silhouettes"></div>
+<div class="relative z-10 max-w-4xl">
+<span class="font-label text-primary uppercase tracking-[0.3em] text-xs mb-6 block">Legacy &amp; Vision</span>
+<h1 class="font-headline text-6xl md:text-8xl italic text-on-surface leading-[1.1] mb-8">Crafting the <br/>Parisian Nocturne</h1>
+<p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">Beyond transportation, we provide a silent sanctuary within the heart of the city of light.</p>
+</div>
+</section>
+<!-- Our Story & Mission: Asymmetric Layout -->
+<section class="py-32 px-5 md:px-12 grid grid-cols-1 md:grid-cols-12 gap-20 items-center">
+<div class="md:col-span-5 space-y-12">
+<div>
+<h2 class="font-headline text-4xl text-primary mb-6">Our Story</h2>
+<p class="text-on-surface-variant leading-loose text-lg">
+                        Born in the heart of the 8th Arrondissement, L'Ã‰lite Nocturne was founded on a singular principle: that movement through Paris should be as refined as the destinations themselves. For over a decade, we have served as the silent concierge to the city's most discerning travelers, building a legacy of luxury transport that honors the heritage of French hospitality.
+                    </p>
+</div>
+<div>
+<h2 class="font-headline text-4xl text-primary mb-6">Our Mission</h2>
+<p class="text-on-surface-variant leading-loose text-lg">
+                        To provide the safest and most refined travel experience in the European capital. We orchestrate every detailâ€”from the climate of the cabin to the discretion of the routeâ€”ensuring your journey is a seamless extension of your professional or private lifestyle.
+                    </p>
+</div>
+</div>
+<div class="md:col-span-7">
+<div class="relative aspect-[4/5] w-full bg-surface-container overflow-hidden rounded-lg">
+<img alt="" class="w-full h-full object-cover opacity-80" data-alt="A sophisticated black and white editorial photograph of a vintage luxury car parked in front of a grand Parisian haussmann building at dusk" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDCJy4WA9StT5U6jd0RBM6oNISd-YRqsD9Px7ZNefPvLN5PC0LNr_LbSa-W-b57fN5-cYWFejeyZ6A2KCjtUzFEhXIXchxBeH9Uyfz1XQoG2oxaHrJPbD_Y688wFGsjqc3RgN1_FHtQCTuZCzTbA9ZS4a2BufcLuAD6S7sDT61d8Etgx4OePr0D9cKyhpmVFAYOx3QXRHBCVddK2nOvmuGWO94EcLBt2kgU3vuCkW9vpp4iRO61p-zn8Evb-iqSle8KbB4V1qEk0y4"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background via-transparent to-transparent"></div>
+</div>
+</div>
+</section>
+<!-- Why Choose Us: Glassmorphism Bento -->
+<section class="py-32 px-5 md:px-12 bg-surface-container-low">
+<div class="text-center mb-20">
+<h2 class="font-headline text-5xl italic mb-4">The Standard of Excellence</h2>
+<div class="w-24 h-px bg-primary mx-auto opacity-40"></div>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory md:grid md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid-cols-3 md:gap-8">
+<!-- Punctuality -->
+<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-80 snap-start md:w-auto md:flex-auto">
+<div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-3xl" data-icon="schedule">schedule</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Punctuality</h3>
+<p class="text-on-surface-variant leading-relaxed">Our logistics center monitors Paris traffic in real-time, ensuring your chauffeur arrives ten minutes before your scheduled departure.</p>
+</div>
+<!-- Professional Chauffeurs -->
+<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-80 snap-start md:w-auto md:flex-auto">
+<div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-3xl" data-icon="assignment_ind">assignment_ind</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Professional Chauffeurs</h3>
+<p class="text-on-surface-variant leading-relaxed">Multilingual experts trained in high-protocol service, providing a balance of warm hospitality and professional distance.</p>
+</div>
+<!-- Premium Fleet -->
+<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-80 snap-start md:w-auto md:flex-auto">
+<div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary group-hover:scale-110 duration-500">
+<span class="material-symbols-outlined text-3xl" data-icon="directions_car">directions_car</span>
+</div>
+<h3 class="font-headline text-2xl mb-4">Premium Fleet</h3>
+<p class="text-on-surface-variant leading-relaxed">A curated selection of the latest Mercedes-Benz S-Class and V-Class models, meticulously maintained and detailed daily.</p>
+</div>
+</div>
+</section>
+<!-- Team Section: Sophisticated Grid -->
+<section class="py-32 px-5 md:px-12">
+<div class="flex flex-col md:flex-row justify-between items-end mb-20 gap-8">
+<div class="max-w-2xl">
+<h2 class="font-headline text-5xl mb-6">Our Elite Chauffeurs</h2>
+<p class="text-on-surface-variant text-lg leading-relaxed">Each member of our team is more than a driver; they are ambassadors of our commitment to excellence, selected for their intimate knowledge of Paris and dedication to service.</p>
+</div>
+<div class="font-label text-primary tracking-widest text-sm uppercase border-b border-primary/20 pb-2">Crafting Expertise</div>
+</div>
+<div class="flex gap-4 overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory sm:grid sm:mx-0 sm:px-0 sm:pb-0 sm:overflow-visible sm:grid-cols-2 lg:grid-cols-4">
+<!-- Chauffeur 1 -->
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of a distinguished male chauffeur in a sharp tailored black suit and white shirt, professional studio lighting with dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFt7g1G_P_-_ubMC8p0JJl4rwFcbCZLqMJpc4ZXbeRucdOYWd6K1jl_n14Z8I1KGqesp2okkTHqO88sX7H5lb2nCbZ2fdbP_VMj5g_X1iKzcWXcIC7ujZLqbI3LnVI1pOJwuPkhgGToaBnIeG7FJ35iZ75UbP0w96uGrMI_AXfhEuD7ABYjpBglPfk3lycWezrhvgOrOYtyymCF_Dp7jNFQR_fY7WyYQ8i0LI7_D_gngFOVdpFAiOG5onrb_4fmfKeUeypumbexD0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-headline text-xl text-on-surface">Jean-Pierre</p>
+<p class="text-xs text-primary uppercase tracking-widest">Master Chauffeur</p>
+</div>
+</div>
+<!-- Chauffeur 2 -->
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of an elegant female chauffeur with hair in a professional bun wearing a dark blazer, soft moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt9k-AzkAOTVDEckN-KSlCkrRjsjLFPzGm9SLz1x75cyCmjjU3tjG5iERhwdEisEh5S_vCEJoMLljduWVMu2q0luQCpUywVNQdL2vVPHcTHAmld8qo6bQALPWv2YmqE_ScTq128ADn_qI40GutoAYTPJch56u4P9yDJCWIzLTCv81MgYFw8_C50O015WswsdhKFBcd0mejZ-kFRmBW-iVu20WEB9hTUzhTxlx5kMWQTZ31vvfSZCcstYeRMo0uz58-dYRkpoeU7fU"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-headline text-xl text-on-surface">Marc-Antoine</p>
+<p class="text-xs text-primary uppercase tracking-widest">Senior Partner</p>
+</div>
+</div>
+<!-- Chauffeur 3 -->
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of a smiling professional chauffeur in a luxury car interior, dark leather seats visible in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALXxl-CvDVex0osf7waiYFnx7VPkordd8qcpPdOtqy6RbTCqa70GJCE95Ay-j7aFlmzPUyZWbtKTog3nxMj8wkxcHp26MnYwM_P2V4lZ7vbZY0vVY0SVaMP-VwcVyev1RSrlrSb_pPCMfhlVGdfpDST2a_YqnzzOooBXru49dbeFX0iLYVHR4mYaNxDRrChXYrCtt2gCmuETBMJoG57Of5NJwVr5a5C7p1F0iBKKQCJfxEvr49CJj9SCh7T6K_XF00PftaU6jqhu0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-headline text-xl text-on-surface">Sophie</p>
+<p class="text-xs text-primary uppercase tracking-widest">VIP Specialist</p>
+</div>
+</div>
+<!-- Chauffeur 4 -->
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up portrait of a chauffeur with white gloves holding a silver car door handle, high luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRnBqTN2ykWkvj9tDXd9MACO4ZWEj-tKnGjuzlIeLOL1VS_Eqca45va9k1Np1d-TdqoZ21ZA1OQVbHwBxrpH0vegxRET4nT6NLFE6-5-UOSe407KOW4Vt1kpTJ_82bxlunIbpK9DXc7-tEIKSAoleMpSSvIgfUtjVDRSwMOhOfQpg4_ZgDW9kLfxLjOJI5C5hh06EUU_wbs15ztuGaKOfsqAo6E-k7279M2nnEnwFA4Wg-LSWLrWaZqeoz35l6cfzmH5HvIIoFqF0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
+<div class="absolute bottom-6 left-6">
+<p class="font-headline text-xl text-on-surface">Luc</p>
+<p class="text-xs text-primary uppercase tracking-widest">Executive Chauffeur</p>
+</div>
+</div>
+</div>
+</section>
+<!-- CTA Section -->
+<section class="py-32 px-5 md:px-12 text-center bg-surface-container-low border-y border-outline-variant/5">
+<h2 class="font-headline text-4xl mb-8 italic">Your Journey Awaits</h2>
+<p class="max-w-xl mx-auto text-on-surface-variant mb-12">Experience the pinnacle of Parisian transport. Reservations available 24/7 for airport transfers, city tours, and private events.</p>
+<div class="flex justify-center gap-6">
+<a class="bg-primary text-on-primary-fixed font-bold py-4 px-10 rounded-lg hover:bg-primary-container transition-colors duration-300" href="contact.html">Book A Chauffeur</a>
+<a class="border border-outline/20 text-on-surface font-bold py-4 px-10 rounded-lg hover:bg-on-surface/5 transition-colors duration-300" href="services.html">View Services</a>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<!-- Footer Section -->
+<!-- Footer Section -->
+<footer class="relative w-full border-t border-neutral-800/30 bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 py-4 md:py-8 px-5 md:px-8 overflow-hidden">
+<div class="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-amber-500/10 blur-3xl"></div>
+<div class="pointer-events-none absolute -bottom-32 left-[-5%] h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
+<div class="max-w-7xl mx-auto">
+<div class="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6 items-start">
+<div class="col-span-1 md:col-span-4 flex flex-col gap-2 md:gap-4">
+<a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-3xl md:text-4xl leading-none text-glow opacity-90 self-start mb-2 md:mb-0" href="index.html">VTC PARIS</a>
+<p class="hidden md:block text-sm text-neutral-400 leading-relaxed max-w-sm">
+                    Discreet, premium VTC service in Paris. Tailored rides for airport, events, and nightly city journeys.
+                </p>
+<div class="hidden md:flex items-center gap-3 text-neutral-400 text-sm">
+<span class="material-symbols-outlined text-amber-400 text-base">call</span>
+<span>+33 1 84 88 12 34</span>
+</div>
+<div class="hidden md:flex items-center gap-3 text-neutral-400 text-sm">
+<span class="material-symbols-outlined text-amber-400 text-base">mail</span>
+<span>contact@vtcpariselite.com</span>
+</div>
+</div>
+<div class="col-span-1 md:col-span-3">
+<div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Company</div>
+<div class="flex flex-col gap-2 md:gap-3">
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="about.html">About</a>
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="services.html">Services</a>
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="faq.html">FAQ</a>
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-3">
+<div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Legal</div>
+<div class="flex flex-col gap-2 md:gap-3">
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Privacy Policy</a>
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Terms of Service</a>
+<a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Chauffeur Login</a>
+</div>
+</div>
+<div class="col-span-1 md:col-span-2">
+<div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Follow</div>
+<div class="flex gap-3 md:gap-4 mt-2 md:mt-0">
+<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">share</span>
+<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">language</span>
+<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">schedule</span>
+</div>
+</div>
+</div>
+<div class="mt-2 md:mt-4 flex flex-row items-center justify-between gap-4 border-t border-neutral-800/30 pt-2 md:pt-4">
+<span class="text-[10px] tracking-widest uppercase text-neutral-500">&copy; 2024 VTC PARIS. All rights reserved.</span>
+<span class="text-[10px] text-neutral-600">Crafted for the Parisian Night.</span>
+</div>
+</div>
+</footer>
+
+</body></html>
