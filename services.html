@@ -3,7 +3,7 @@
 <html class="dark overflow-x-hidden overscroll-x-none" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Services | L'Ã‰LITE NOCTURNE - Premium Paris VTC</title>
+    <title>Services | L'ÉLITE NOCTURNE - Premium Paris VTC</title>
 <meta name="description" content="Explore VTC PARIS services: airport transfers (CDG/ORY), events, business rides, and private city journeys with premium chauffeurs."/>
 <meta name="keywords" content="VTC services Paris, airport transfer CDG, ORY transfer, chauffeur Paris, private driver Paris, luxury transport Paris, VTC-PARIS"/>
 <meta name="theme-color" content="#131313"/>
@@ -90,6 +90,8 @@
       html, body { margin: 0; width: 100%; overflow-x: hidden; }
       details > summary { list-style: none; }
       details > summary::-webkit-details-marker { display: none; }
+      details[open] summary .icon-menu { display: none; }
+      details:not([open]) summary .icon-close { display: none; }
       .glass-card {
         background: rgba(32, 31, 31, 0.4);
         backdrop-filter: blur(12px);
@@ -100,13 +102,19 @@
       .services-hero-bg {
         background: linear-gradient(to bottom, rgba(19,19,19,0.35), rgba(19,19,19,1)), url('assets/services-hero.jpg');
         background-size: cover;
-        background-position: center;
+        background-position: center 5%;
+      }
+      @media (min-width: 768px) {
+        .services-hero-bg {
+          background-position: center 10%;
+        }
       }
     </style>
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary/30 pb-0 m-0 w-full overflow-x-hidden overscroll-x-none">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-3 md:py-4 max-w-full mx-auto shadow-[0_10px_40px_rgba(233,193,118,0.04)]">
+<nav class="fixed top-0 inset-x-0 z-50 bg-neutral-950/70 backdrop-blur-xl shadow-[0_10px_40px_rgba(233,193,118,0.04)]">
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto flex justify-between items-center px-6 md:px-12 py-3 md:py-4 w-full">
 <div class="flex items-center">
 <a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-2xl md:text-3xl leading-none text-glow" href="index.html">VTC-PARIS</a>
 </div>
@@ -114,8 +122,8 @@
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="index.html">Home</a>
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="about.html">About</a>
 <a class="font-noto-serif italic tracking-wide text-amber-200 border-b border-amber-200/30 pb-1 transition-all duration-500 ease-in-out" href="services.html">Services</a>
-<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="https://groupebluevanparis.com/rates/en">Our Rates</a>
-<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="https://groupebluevanparis.com/our_fleets/en">Our Fleets</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="rates.html">Our Rates</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="fleets.html">Our Fleets</a>
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="faq.html">FAQ</a>
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="contact.html">Contact</a>
 </div>
@@ -123,14 +131,15 @@
 <a class="inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-semibold px-4 py-2 rounded shadow-lg hover:opacity-90 transition-opacity" href="contact.html">Book Now</a>
 <details class="relative">
 <summary aria-label="Open menu" class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-800/60 bg-neutral-900/80 text-neutral-200 hover:text-amber-200 hover:bg-neutral-900 transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-[20px]">menu</span>
+<span class="material-symbols-outlined text-[20px] icon-menu">menu</span>
+<span class="material-symbols-outlined text-[20px] icon-close">close</span>
 </summary>
 <div class="absolute right-0 mt-2 w-48 rounded-xl border border-neutral-800/60 bg-neutral-950/95 backdrop-blur-xl shadow-[0_18px_60px_rgba(0,0,0,0.55)] p-2">
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="index.html">Home</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="about.html">About</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="services.html">Services</a>
-<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="https://groupebluevanparis.com/rates/en">Our Rates</a>
-<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="https://groupebluevanparis.com/our_fleets/en">Our Fleets</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="rates.html">Our Rates</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="fleets.html">Our Fleets</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="faq.html">FAQ</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
 </div>
@@ -139,12 +148,13 @@
 <a class="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-semibold px-8 py-2.5 rounded shadow-lg hover:scale-105 duration-500 transition-all" href="contact.html">
             Book Now
         </a>
+</div>
 </nav>
 <main>
 <!-- Hero Section -->
 <header class="px-5 md:px-12 mb-20 relative overflow-hidden rounded-xl services-hero-bg pt-32 md:pt-36 pb-16">
 <div class="absolute inset-0 bg-gradient-to-b from-background/10 via-background/50 to-background"></div>
-<div class="relative max-w-6xl mx-auto flex flex-col md:flex-row items-end justify-between gap-8">
+<div class="relative max-w-6xl 2xl:max-w-screen-xl mx-auto flex flex-col md:flex-row items-end justify-between gap-8">
 <div class="max-w-2xl">
 <span class="text-primary font-label font-bold tracking-[0.3em] uppercase text-xs mb-4 block">Tailored Excellence</span>
 <h1 class="text-6xl font-headline italic leading-[1.1] text-on-surface">The Silent Art of <br/> Parisian Movement</h1>
@@ -155,7 +165,8 @@
 </div>
 </header>
 <!-- Services Bento Grid -->
-<section class="px-5 md:px-12 max-w-7xl mx-auto">
+<section class="w-full px-5 md:px-12">
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto w-full">
 <div class="grid grid-cols-1 md:grid-cols-12 gap-6 h-auto md:h-[900px]">
 <!-- 1. Airport Transfers (Large Featured Card) -->
 <div class="md:col-span-8 group relative overflow-hidden bg-surface-container-low rounded-lg transition-all duration-700">
@@ -186,7 +197,7 @@
 <span class="material-symbols-outlined text-primary text-3xl mb-6" data-icon="business_center">business_center</span>
 <h2 class="text-2xl font-headline italic text-on-surface mb-4">Executive VTC</h2>
 <p class="text-on-surface-variant text-sm leading-relaxed mb-8">
-                            A mobile office for the modern executive. High-speed connectivity, privacy partitions, and absolute discretion for your business travel within the La DÃ©fense district and beyond.
+                                A mobile office for the modern executive. High-speed connectivity, privacy partitions, and absolute discretion for your business travel within the La Défense district and beyond.
                         </p>
 <div class="mt-auto border-t border-outline-variant/10 pt-6">
 <span class="text-[10px] uppercase tracking-[0.2em] text-on-surface-variant block mb-2">Ideal for</span>
@@ -235,14 +246,16 @@
 </div>
 </div>
 </div>
+</div>
 </section>
 <!-- Signature Component: Fleet Preview (Asymmetric) -->
-<section class="mt-40 px-5 md:px-12 max-w-7xl mx-auto overflow-hidden">
+<section class="mt-40 w-full px-5 md:px-12 overflow-x-hidden overflow-y-visible">
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto w-full">
 <div class="flex flex-col md:flex-row items-center gap-20">
 <div class="w-full md:w-1/2 relative">
 <div class="absolute -top-10 -left-10 w-40 h-40 border-l border-t border-primary/20"></div>
 <img class="rounded-lg shadow-2xl relative z-10" data-alt="Side profile of a sleek black luxury sedan reflecting Parisian street lamps in its polished paint at night" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaIGy_eLla55i1TLNWg6vjxRuZdZIORfpT0OsE7vLYn3g0VhBdHBuwZ58Y1J1ivNVvLT4jO0_zDt412EKhxL_l2yn7tic6VDQHIuKn_Hq46TZMQ5wyMVWnXpNIMhTVLaS9Z6qYz8nFKFgg1cTw5iUxlFpNmLAnLn3gm6vo1Gz1KHjuiNCh9ZQjkD6yKz7NIGLA6Lf904_wh5riBJ24-YnkJS7BW9Nrj9N_vVi89CS_PlAWduzUXo1qVNPPXzpYvhb8d-6v4x5hzN0"/>
-<div class="absolute -bottom-10 -right-10 w-64 p-8 glass-card border border-outline-variant/10 z-20">
+<div class="absolute bottom-6 right-6 md:bottom-8 md:right-8 w-64 p-8 glass-card border border-outline-variant/10 z-20">
 <p class="text-primary font-headline italic text-xl mb-2">Mercedes-Benz</p>
 <p class="text-on-surface-variant font-label text-[10px] tracking-widest uppercase">S-Class Maybach Edition</p>
 </div>
@@ -271,6 +284,8 @@
 </div>
 </div>
 </div>
+</div>
+</div>
 </section>
 <!-- CTA Section -->
 <section class="mt-40 px-5 md:px-12 text-center">
@@ -293,10 +308,10 @@
 <footer class="relative w-full border-t border-neutral-800/30 bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 py-4 md:py-8 px-5 md:px-8 overflow-hidden">
 <div class="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-amber-500/10 blur-3xl"></div>
 <div class="pointer-events-none absolute -bottom-32 left-[-5%] h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6 items-start">
-<div class="col-span-1 md:col-span-4 flex flex-col gap-2 md:gap-4">
-<a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-3xl md:text-4xl leading-none text-glow opacity-90 self-start mb-2 md:mb-0" href="index.html">VTC-PARIS</a>
+<div class="col-span-1 md:col-span-4 flex flex-col gap-2 md:gap-4 order-1 md:order-none">
+<a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-3xl md:text-4xl leading-none text-glow opacity-90 self-start mb-2 md:mb-0 whitespace-nowrap" href="index.html">VTC-PARIS</a>
 <p class="hidden md:block text-sm text-neutral-400 leading-relaxed max-w-sm">
                     Discreet, premium VTC service in Paris. Tailored rides for airport, events, and nightly city journeys.
                 </p>
@@ -309,7 +324,7 @@
 <span>contact@vtcpariselite.com</span>
 </div>
 </div>
-<div class="col-span-1 md:col-span-3">
+<div class="col-span-1 md:col-span-3 order-2 md:order-none">
 <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Company</div>
 <div class="flex flex-col gap-2 md:gap-3">
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="about.html">About</a>
@@ -318,7 +333,7 @@
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
 </div>
 </div>
-<div class="col-span-1 md:col-span-3">
+<div class="col-span-1 md:col-span-3 order-3 md:order-none">
 <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Legal</div>
 <div class="flex flex-col gap-2 md:gap-3">
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Privacy Policy</a>
@@ -326,12 +341,18 @@
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Chauffeur Login</a>
 </div>
 </div>
-<div class="col-span-1 md:col-span-2">
+<div class="col-span-1 md:col-span-2 order-4 md:order-none hidden">
 <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Follow</div>
 <div class="flex gap-3 md:gap-4 mt-2 md:mt-0">
-<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">share</span>
-<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">language</span>
-<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">schedule</span>
+<a aria-label="WhatsApp" class="text-amber-400/90 hover:text-amber-200 transition-colors" href="https://wa.me/33184881234" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+<path d="M19.11 17.23c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.09-.16.19-.31.21-.59.07-.28-.14-1.17-.43-2.23-1.36-.82-.73-1.37-1.62-1.53-1.9-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.47.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.47-.61-.48h-.52c-.18 0-.47.07-.71.35-.25.28-.93.91-.93 2.22s.95 2.58 1.08 2.76c.14.19 1.87 2.86 4.54 4.01.63.27 1.13.43 1.51.55.64.2 1.23.17 1.69.1.52-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.52-.33z"/>
+<path d="M16.02 4C9.38 4 4 9.26 4 15.73c0 2.05.55 4.05 1.6 5.82L4 28l6.66-1.72c1.72.92 3.65 1.41 5.36 1.41 6.64 0 12.02-5.26 12.02-11.73C28.04 9.26 22.66 4 16.02 4zm0 21.78c-1.59 0-3.39-.52-4.86-1.39l-.35-.21-3.95 1.02 1.05-3.74-.23-.37c-1.01-1.64-1.54-3.48-1.54-5.37 0-5.41 4.53-9.8 10.1-9.8s10.1 4.4 10.1 9.8c0 5.41-4.53 9.8-10.1 9.8z"/>
+</svg>
+</a>
+<a aria-label="Email" class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 transition-colors" href="mailto:contact@vtcpariselite.com">share</a>
+<a aria-label="Website" class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 transition-colors" href="index.html">language</a>
+<a aria-label="Contact" class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 transition-colors" href="contact.html">schedule</a>
 </div>
 </div>
 </div>

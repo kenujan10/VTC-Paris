@@ -90,6 +90,8 @@
       html, body { margin: 0; width: 100%; overflow-x: hidden; }
       details > summary { list-style: none; }
       details > summary::-webkit-details-marker { display: none; }
+      details[open] summary .icon-menu { display: none; }
+      details:not([open]) summary .icon-close { display: none; }
       .bg-hero-gradient {
         background: linear-gradient(to bottom, rgba(19,19,19,0.4), rgba(19,19,19,1)), url('assets/taxi-sur-la-tour-eiffel-paris.jpg');
         background-size: cover;
@@ -99,7 +101,8 @@
 </head>
 <body class="bg-background text-on-surface font-body selection:bg-primary/30 pb-0 m-0 w-full overflow-x-hidden overscroll-x-none">
 <!-- Top Navigation Bar -->
-<nav class="fixed top-0 w-full z-50 bg-neutral-950/70 backdrop-blur-xl flex justify-between items-center px-6 md:px-12 py-3 md:py-4 max-w-full mx-auto shadow-[0_10px_40px_rgba(233,193,118,0.04)]">
+<nav class="fixed top-0 inset-x-0 z-50 bg-neutral-950/70 backdrop-blur-xl shadow-[0_10px_40px_rgba(233,193,118,0.04)]">
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto flex justify-between items-center px-6 md:px-12 py-3 md:py-4 w-full">
 <div class="flex items-center">
 <a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-2xl md:text-3xl leading-none text-glow" href="index.html">VTC-PARIS</a>
 </div>
@@ -107,8 +110,8 @@
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="index.html">Home</a>
 <a class="font-noto-serif italic tracking-wide text-amber-200 border-b border-amber-200/30 pb-1 transition-all duration-500 ease-in-out" href="about.html">About</a>
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="services.html">Services</a>
-<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="https://groupebluevanparis.com/rates/en">Our Rates</a>
-<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="https://groupebluevanparis.com/our_fleets/en">Our Fleets</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="rates.html">Our Rates</a>
+<a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="fleets.html">Our Fleets</a>
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="faq.html">FAQ</a>
 <a class="font-noto-serif italic tracking-wide text-neutral-400 hover:text-amber-100 transition-colors duration-300 transition-all duration-500 ease-in-out" href="contact.html">Contact</a>
 </div>
@@ -116,14 +119,15 @@
 <a class="inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-semibold px-4 py-2 rounded shadow-lg hover:opacity-90 transition-opacity" href="contact.html">Book Now</a>
 <details class="relative">
 <summary aria-label="Open menu" class="inline-flex items-center justify-center w-10 h-10 rounded-xl border border-neutral-800/60 bg-neutral-900/80 text-neutral-200 hover:text-amber-200 hover:bg-neutral-900 transition-colors cursor-pointer">
-<span class="material-symbols-outlined text-[20px]">menu</span>
+<span class="material-symbols-outlined text-[20px] icon-menu">menu</span>
+<span class="material-symbols-outlined text-[20px] icon-close">close</span>
 </summary>
 <div class="absolute right-0 mt-2 w-48 rounded-xl border border-neutral-800/60 bg-neutral-950/95 backdrop-blur-xl shadow-[0_18px_60px_rgba(0,0,0,0.55)] p-2">
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="index.html">Home</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="about.html">About</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="services.html">Services</a>
-<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="https://groupebluevanparis.com/rates/en">Our Rates</a>
-<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="https://groupebluevanparis.com/our_fleets/en">Our Fleets</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="rates.html">Our Rates</a>
+<a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="fleets.html">Our Fleets</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="faq.html">FAQ</a>
 <a class="block rounded-lg px-3 py-2 text-sm text-neutral-200 hover:bg-white/5 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
 </div>
@@ -132,15 +136,18 @@
 <a class="hidden md:inline-flex bg-gradient-to-br from-primary to-primary-container text-on-primary-fixed font-semibold px-8 py-2.5 rounded shadow-lg hover:scale-105 duration-500 transition-all" href="contact.html">
             Book Now
         </a>
+</div>
 </nav>
 <main>
 <!-- Hero Section: Editorial Header -->
-<section class="relative h-[716px] flex items-center px-5 md:px-12 pt-24 overflow-hidden">
+<section class="relative h-[716px] flex items-center pt-24 overflow-hidden">
 <div class="absolute inset-0 z-0 bg-hero-gradient" data-alt="Cinematic wide shot of Paris at night with warm golden street lights reflecting on the wet cobblestone streets and dark luxury sedan silhouettes"></div>
-<div class="relative z-10 max-w-4xl">
+<div class="relative z-10 w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto px-5 md:px-12">
+<div class="max-w-4xl">
 <span class="font-label text-primary uppercase tracking-[0.3em] text-xs mb-6 block">Legacy &amp; Vision</span>
 <h1 class="font-headline text-6xl md:text-8xl italic text-on-surface leading-[1.1] mb-8">Crafting the <br/>Parisian Nocturne</h1>
 <p class="font-body text-xl text-on-surface-variant max-w-xl leading-relaxed">Beyond transportation, we provide a silent sanctuary within the heart of the city of light.</p>
+</div>
 </div>
 </section>
 <!-- Our Story & Mission: Asymmetric Layout -->
@@ -149,13 +156,13 @@
 <div>
 <h2 class="font-headline text-4xl text-primary mb-6">Our Story</h2>
 <p class="text-on-surface-variant leading-loose text-lg">
-                        Born in the heart of the 8th Arrondissement, L'Ã‰lite Nocturne was founded on a singular principle: that movement through Paris should be as refined as the destinations themselves. For over a decade, we have served as the silent concierge to the city's most discerning travelers, building a legacy of luxury transport that honors the heritage of French hospitality.
+                        Born in the heart of the 8th Arrondissement, L'Élite Nocturne was founded on a singular principle: that movement through Paris should be as refined as the destinations themselves. For over a decade, we have served as the silent concierge to the city's most discerning travelers, building a legacy of luxury transport that honors the heritage of French hospitality.
                     </p>
 </div>
 <div>
 <h2 class="font-headline text-4xl text-primary mb-6">Our Mission</h2>
 <p class="text-on-surface-variant leading-loose text-lg">
-                        To provide the safest and most refined travel experience in the European capital. We orchestrate every detailâ€”from the climate of the cabin to the discretion of the routeâ€”ensuring your journey is a seamless extension of your professional or private lifestyle.
+                        To provide the safest and most refined travel experience in the European capital. We orchestrate every detail—from the climate of the cabin to the discretion of the route—ensuring your journey is a seamless extension of your professional or private lifestyle.
                     </p>
 </div>
 </div>
@@ -172,9 +179,9 @@
 <h2 class="font-headline text-5xl italic mb-4">The Standard of Excellence</h2>
 <div class="w-24 h-px bg-primary mx-auto opacity-40"></div>
 </div>
-<div class="flex gap-4 overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory md:grid md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid-cols-3 md:gap-8">
+<div class="flex gap-4 overflow-x-auto pb-2 mx-0 px-0 snap-x snap-mandatory md:grid md:mx-0 md:px-0 md:pb-0 md:overflow-visible md:grid-cols-3 md:gap-8">
 <!-- Punctuality -->
-<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-80 snap-start md:w-auto md:flex-auto">
+<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-[calc(100vw-2.5rem)] sm:w-80 snap-start md:w-auto md:flex-auto">
 <div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary group-hover:scale-110 duration-500">
 <span class="material-symbols-outlined text-3xl" data-icon="schedule">schedule</span>
 </div>
@@ -182,7 +189,7 @@
 <p class="text-on-surface-variant leading-relaxed">Our logistics center monitors Paris traffic in real-time, ensuring your chauffeur arrives ten minutes before your scheduled departure.</p>
 </div>
 <!-- Professional Chauffeurs -->
-<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-80 snap-start md:w-auto md:flex-auto">
+<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-[calc(100vw-2.5rem)] sm:w-80 snap-start md:w-auto md:flex-auto">
 <div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary group-hover:scale-110 duration-500">
 <span class="material-symbols-outlined text-3xl" data-icon="assignment_ind">assignment_ind</span>
 </div>
@@ -190,7 +197,7 @@
 <p class="text-on-surface-variant leading-relaxed">Multilingual experts trained in high-protocol service, providing a balance of warm hospitality and professional distance.</p>
 </div>
 <!-- Premium Fleet -->
-<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-80 snap-start md:w-auto md:flex-auto">
+<div class="p-12 bg-surface-container border border-outline-variant/10 rounded-xl hover:bg-surface-bright transition-all duration-500 group flex-none w-[calc(100vw-2.5rem)] sm:w-80 snap-start md:w-auto md:flex-auto">
 <div class="mb-8 inline-flex items-center justify-center w-16 h-16 rounded-full bg-primary/5 text-primary group-hover:scale-110 duration-500">
 <span class="material-symbols-outlined text-3xl" data-icon="directions_car">directions_car</span>
 </div>
@@ -208,9 +215,9 @@
 </div>
 <div class="font-label text-primary tracking-widest text-sm uppercase border-b border-primary/20 pb-2">Crafting Expertise</div>
 </div>
-<div class="flex gap-4 overflow-x-auto pb-2 -mx-5 px-5 snap-x snap-mandatory sm:grid sm:mx-0 sm:px-0 sm:pb-0 sm:overflow-visible sm:grid-cols-2 lg:grid-cols-4">
+<div class="flex gap-4 overflow-x-auto pb-2 mx-0 px-0 snap-x snap-mandatory sm:grid sm:mx-0 sm:px-0 sm:pb-0 sm:overflow-visible sm:grid-cols-2 lg:grid-cols-4">
 <!-- Chauffeur 1 -->
-<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-[calc(100vw-2.5rem)] snap-start sm:w-auto sm:flex-auto">
 <img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of a distinguished male chauffeur in a sharp tailored black suit and white shirt, professional studio lighting with dark background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFt7g1G_P_-_ubMC8p0JJl4rwFcbCZLqMJpc4ZXbeRucdOYWd6K1jl_n14Z8I1KGqesp2okkTHqO88sX7H5lb2nCbZ2fdbP_VMj5g_X1iKzcWXcIC7ujZLqbI3LnVI1pOJwuPkhgGToaBnIeG7FJ35iZ75UbP0w96uGrMI_AXfhEuD7ABYjpBglPfk3lycWezrhvgOrOYtyymCF_Dp7jNFQR_fY7WyYQ8i0LI7_D_gngFOVdpFAiOG5onrb_4fmfKeUeypumbexD0"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
 <div class="absolute bottom-6 left-6">
@@ -219,7 +226,7 @@
 </div>
 </div>
 <!-- Chauffeur 2 -->
-<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-[calc(100vw-2.5rem)] snap-start sm:w-auto sm:flex-auto">
 <img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of an elegant female chauffeur with hair in a professional bun wearing a dark blazer, soft moody lighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBt9k-AzkAOTVDEckN-KSlCkrRjsjLFPzGm9SLz1x75cyCmjjU3tjG5iERhwdEisEh5S_vCEJoMLljduWVMu2q0luQCpUywVNQdL2vVPHcTHAmld8qo6bQALPWv2YmqE_ScTq128ADn_qI40GutoAYTPJch56u4P9yDJCWIzLTCv81MgYFw8_C50O015WswsdhKFBcd0mejZ-kFRmBW-iVu20WEB9hTUzhTxlx5kMWQTZ31vvfSZCcstYeRMo0uz58-dYRkpoeU7fU"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
 <div class="absolute bottom-6 left-6">
@@ -228,7 +235,7 @@
 </div>
 </div>
 <!-- Chauffeur 3 -->
-<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-[calc(100vw-2.5rem)] snap-start sm:w-auto sm:flex-auto">
 <img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Portrait of a smiling professional chauffeur in a luxury car interior, dark leather seats visible in background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuALXxl-CvDVex0osf7waiYFnx7VPkordd8qcpPdOtqy6RbTCqa70GJCE95Ay-j7aFlmzPUyZWbtKTog3nxMj8wkxcHp26MnYwM_P2V4lZ7vbZY0vVY0SVaMP-VwcVyev1RSrlrSb_pPCMfhlVGdfpDST2a_YqnzzOooBXru49dbeFX0iLYVHR4mYaNxDRrChXYrCtt2gCmuETBMJoG57Of5NJwVr5a5C7p1F0iBKKQCJfxEvr49CJj9SCh7T6K_XF00PftaU6jqhu0"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
 <div class="absolute bottom-6 left-6">
@@ -237,7 +244,7 @@
 </div>
 </div>
 <!-- Chauffeur 4 -->
-<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-72 snap-start sm:w-auto sm:flex-auto">
+<div class="relative group aspect-[3/4] overflow-hidden bg-neutral-900 rounded-lg flex-none w-[calc(100vw-2.5rem)] snap-start sm:w-auto sm:flex-auto">
 <img alt="" class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="Close up portrait of a chauffeur with white gloves holding a silver car door handle, high luxury aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCRnBqTN2ykWkvj9tDXd9MACO4ZWEj-tKnGjuzlIeLOL1VS_Eqca45va9k1Np1d-TdqoZ21ZA1OQVbHwBxrpH0vegxRET4nT6NLFE6-5-UOSe407KOW4Vt1kpTJ_82bxlunIbpK9DXc7-tEIKSAoleMpSSvIgfUtjVDRSwMOhOfQpg4_ZgDW9kLfxLjOJI5C5hh06EUU_wbs15ztuGaKOfsqAo6E-k7279M2nnEnwFA4Wg-LSWLrWaZqeoz35l6cfzmH5HvIIoFqF0"/>
 <div class="absolute inset-0 bg-gradient-to-t from-background to-transparent opacity-60"></div>
 <div class="absolute bottom-6 left-6">
@@ -263,10 +270,10 @@
 <footer class="relative w-full border-t border-neutral-800/30 bg-gradient-to-b from-neutral-950 via-neutral-950 to-neutral-900 py-4 md:py-8 px-5 md:px-8 overflow-hidden">
 <div class="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-amber-500/10 blur-3xl"></div>
 <div class="pointer-events-none absolute -bottom-32 left-[-5%] h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
-<div class="max-w-7xl mx-auto">
+<div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto">
 <div class="grid grid-cols-2 md:grid-cols-12 gap-4 md:gap-6 items-start">
-<div class="col-span-1 md:col-span-4 flex flex-col gap-2 md:gap-4">
-<a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-3xl md:text-4xl leading-none text-glow opacity-90 self-start mb-2 md:mb-0" href="index.html">VTC-PARIS</a>
+<div class="col-span-1 md:col-span-4 flex flex-col gap-2 md:gap-4 order-1 md:order-none">
+<a aria-label="VTC PARIS" class="font-headline italic tracking-wide text-amber-200 text-3xl md:text-4xl leading-none text-glow opacity-90 self-start mb-2 md:mb-0 whitespace-nowrap" href="index.html">VTC-PARIS</a>
 <p class="hidden md:block text-sm text-neutral-400 leading-relaxed max-w-sm">
                     Discreet, premium VTC service in Paris. Tailored rides for airport, events, and nightly city journeys.
                 </p>
@@ -279,7 +286,7 @@
 <span>contact@vtcpariselite.com</span>
 </div>
 </div>
-<div class="col-span-1 md:col-span-3">
+<div class="col-span-1 md:col-span-3 order-2 md:order-none">
 <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Company</div>
 <div class="flex flex-col gap-2 md:gap-3">
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="about.html">About</a>
@@ -288,7 +295,7 @@
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
 </div>
 </div>
-<div class="col-span-1 md:col-span-3">
+<div class="col-span-1 md:col-span-3 order-3 md:order-none">
 <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Legal</div>
 <div class="flex flex-col gap-2 md:gap-3">
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Privacy Policy</a>
@@ -296,12 +303,18 @@
 <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Chauffeur Login</a>
 </div>
 </div>
-<div class="col-span-1 md:col-span-2">
+<div class="col-span-1 md:col-span-2 order-4 md:order-none hidden">
 <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Follow</div>
 <div class="flex gap-3 md:gap-4 mt-2 md:mt-0">
-<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">share</span>
-<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">language</span>
-<span class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 cursor-pointer transition-colors">schedule</span>
+<a aria-label="WhatsApp" class="text-amber-400/90 hover:text-amber-200 transition-colors" href="https://wa.me/33184881234" rel="noopener noreferrer" target="_blank">
+<svg aria-hidden="true" class="w-6 h-6" fill="currentColor" viewBox="0 0 32 32">
+<path d="M19.11 17.23c-.28-.14-1.64-.81-1.89-.9-.25-.09-.43-.14-.61.14-.18.28-.7.9-.86 1.09-.16.19-.31.21-.59.07-.28-.14-1.17-.43-2.23-1.36-.82-.73-1.37-1.62-1.53-1.9-.16-.28-.02-.43.12-.57.12-.12.28-.31.42-.47.14-.16.19-.28.28-.47.09-.19.05-.35-.02-.5-.07-.14-.61-1.47-.84-2.01-.22-.54-.45-.47-.61-.48h-.52c-.18 0-.47.07-.71.35-.25.28-.93.91-.93 2.22s.95 2.58 1.08 2.76c.14.19 1.87 2.86 4.54 4.01.63.27 1.13.43 1.51.55.64.2 1.23.17 1.69.1.52-.08 1.64-.67 1.87-1.32.23-.65.23-1.2.16-1.32-.07-.12-.25-.19-.52-.33z"/>
+<path d="M16.02 4C9.38 4 4 9.26 4 15.73c0 2.05.55 4.05 1.6 5.82L4 28l6.66-1.72c1.72.92 3.65 1.41 5.36 1.41 6.64 0 12.02-5.26 12.02-11.73C28.04 9.26 22.66 4 16.02 4zm0 21.78c-1.59 0-3.39-.52-4.86-1.39l-.35-.21-3.95 1.02 1.05-3.74-.23-.37c-1.01-1.64-1.54-3.48-1.54-5.37 0-5.41 4.53-9.8 10.1-9.8s10.1 4.4 10.1 9.8c0 5.41-4.53 9.8-10.1 9.8z"/>
+</svg>
+</a>
+<a aria-label="Email" class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 transition-colors" href="mailto:contact@vtcpariselite.com">share</a>
+<a aria-label="Website" class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 transition-colors" href="index.html">language</a>
+<a aria-label="Contact" class="material-symbols-outlined text-amber-400/90 hover:text-amber-200 transition-colors" href="contact.html">schedule</a>
 </div>
 </div>
 </div>
