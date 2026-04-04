@@ -140,11 +140,12 @@
 <!-- Hero Section -->
 <section class="relative min-h-[65vh] md:min-h-screen w-full flex items-center overflow-hidden">
 <div class="absolute inset-0 z-0">
-<img alt="Luxury VTC in Paris" class="w-full h-full object-cover object-[70%_top] md:object-center scale-100 md:scale-105" data-alt="Luxury white Mercedes Vito with chauffeur in Paris at dusk, Eiffel Tower glowing in the background" src="assets/hero-van.webp"/>
+<img alt="Luxury VTC in Paris" class="w-full h-full object-cover object-[35%_35%] md:object-center scale-100 md:scale-105" data-alt="Premium VTC service visual" src="assets/seo-3.avif"/>
 <div class="absolute inset-0 bg-gradient-to-r from-background via-background/40 to-transparent"></div>
 </div>
 <div class="relative z-10 px-6 md:px-24 pt-20 md:pt-28 pb-16 md:pb-20 w-full max-w-7xl 2xl:max-w-screen-2xl mx-auto">
-<div class="space-y-6">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-12 items-start">
+<div class="lg:col-span-7 space-y-6">
 <span class="font-label text-primary tracking-[0.4em] uppercase text-xs font-bold block mb-4">The Silent Concierge</span>
 <h1 class="font-headline text-4xl md:text-8xl leading-[1.1] text-on-surface max-w-4xl tracking-tight">
                         Experience Paris with <br/>
@@ -161,6 +162,59 @@
 <a class="border border-outline/20 backdrop-blur-md px-8 md:px-10 py-4 md:py-5 rounded-lg text-on-surface hover:bg-white/5 transition-all duration-300 font-semibold w-full sm:w-auto text-center" href="fleets.html">
                             Explore Fleet
                         </a>
+</div>
+</div>
+<div class="lg:col-span-5">
+<form action="contact.html" class="rounded-2xl border border-outline/20 bg-surface-container/70 backdrop-blur-xl shadow-[0_18px_60px_rgba(0,0,0,0.55)] overflow-hidden">
+<div class="p-7 md:p-8">
+<h2 class="font-headline text-2xl md:text-3xl text-on-surface mb-1">Book Your Ride</h2>
+<p class="text-on-surface-variant text-sm mb-6">Quick confirmations subject to availability</p>
+<div class="h-px w-full bg-primary/20"></div>
+<div class="mt-6 space-y-5">
+<div>
+<label class="flex items-center gap-2 text-xs uppercase tracking-widest text-primary font-label mb-2" for="from">
+<span class="material-symbols-outlined text-base">location_on</span>
+From
+</label>
+<select class="w-full rounded-xl bg-neutral-950/60 border border-outline/20 text-on-surface px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40" id="from" name="from" required>
+<option value="" selected>Select Airport or City, Hotel…</option>
+<option value="CDG Airport">CDG Airport</option>
+<option value="Orly Airport">Orly Airport</option>
+<option value="Paris City">Paris City</option>
+<option value="Hotel Pickup">Hotel Pickup</option>
+</select>
+</div>
+<div>
+<label class="flex items-center gap-2 text-xs uppercase tracking-widest text-primary font-label mb-2" for="to">
+<span class="material-symbols-outlined text-base">near_me</span>
+To
+</label>
+<input class="w-full rounded-xl bg-neutral-950/60 border border-outline/20 text-on-surface px-4 py-3 placeholder:text-neutral-500 focus:outline-none focus:ring-2 focus:ring-primary/40" id="to" name="to" placeholder="Select from address first" required type="text"/>
+</div>
+<div>
+<label class="flex items-center gap-2 text-xs uppercase tracking-widest text-primary font-label mb-2" for="passengers">
+<span class="material-symbols-outlined text-base">groups</span>
+Number of Passengers
+</label>
+<select class="w-full rounded-xl bg-neutral-950/60 border border-outline/20 text-on-surface px-4 py-3 focus:outline-none focus:ring-2 focus:ring-primary/40" id="passengers" name="passengers" required>
+<option value="" selected>Select number of passengers</option>
+<option value="1">1</option>
+<option value="2">2</option>
+<option value="3">3</option>
+<option value="4">4</option>
+<option value="5">5</option>
+<option value="6">6</option>
+<option value="7">7</option>
+</select>
+</div>
+</div>
+</div>
+<div class="px-7 pb-7 md:px-8 md:pb-8">
+<button class="w-full rounded-full bg-primary-container text-on-primary-fixed font-bold tracking-widest uppercase text-xs py-4 hover:opacity-90 transition-opacity flex items-center justify-center gap-2" type="submit">
+Check Price &amp; Continue <span class="material-symbols-outlined text-base">arrow_forward</span>
+</button>
+</div>
+</form>
 </div>
 </div>
 </div>
