@@ -12,6 +12,8 @@
       name="keywords"
       content="VTC Paris rates, chauffeur Paris prices, private driver Paris, airport transfer CDG price, ORY transfer price, hourly chauffeur Paris, VTC-PARIS"
     />
+    <meta name="robots" content="index,follow" />
+    <link rel="canonical" href="https://vtc-paris.org/rates.html" />
     <meta name="theme-color" content="#131313" />
     <meta property="og:site_name" content="VTC PARIS" />
     <meta property="og:title" content="Our Rates | VTC PARIS" />
@@ -20,14 +22,39 @@
       content="Transparent VTC Paris rates for city rides, CDG/ORY airport transfers, and hourly chauffeur service."
     />
     <meta property="og:type" content="website" />
-    <meta property="og:image" content="assets/hero-van.webp" />
+    <meta property="og:url" content="https://vtc-paris.org/rates.html" />
+    <meta property="og:image" content="https://vtc-paris.org/assets/hero-van.webp" />
     <meta name="twitter:card" content="summary_large_image" />
     <meta name="twitter:title" content="Our Rates | VTC PARIS" />
     <meta
       name="twitter:description"
       content="Transparent VTC Paris rates for city rides, CDG/ORY airport transfers, and hourly chauffeur service."
     />
-    <meta name="twitter:image" content="assets/hero-van.webp" />
+    <meta name="twitter:image" content="https://vtc-paris.org/assets/hero-van.webp" />
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@graph": [
+          {
+            "@type": "Organization",
+            "@id": "https://vtc-paris.org/#organization",
+            "name": "VTC PARIS",
+            "url": "https://vtc-paris.org/",
+            "logo": "https://vtc-paris.org/assets/logo.png",
+            "image": "https://vtc-paris.org/assets/hero-van.webp",
+            "areaServed": "Paris, France"
+          },
+          {
+            "@type": "WebPage",
+            "@id": "https://vtc-paris.org/rates.html#webpage",
+            "url": "https://vtc-paris.org/rates.html",
+            "name": "Our Rates | L'ELITE NOCTURNE",
+            "description": "Transparent VTC Paris rates: city rides, airport transfers (CDG / ORY), and hourly chauffeur service with a professional private driver in Paris.",
+            "about": { "@id": "https://vtc-paris.org/#organization" }
+          }
+        ]
+      }
+    </script>
     <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
     <link
       href="https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400&amp;family=Manrope:wght@300;400;600;800&amp;display=swap"
@@ -124,6 +151,12 @@
       .glass-effect {
         backdrop-filter: blur(24px);
         -webkit-backdrop-filter: blur(24px);
+      }
+      .rates-hero-bg {
+        background: linear-gradient(to right, rgba(19, 19, 19, 0.92), rgba(19, 19, 19, 0.65), rgba(19, 19, 19, 0.15)),
+          url("assets/rates-nav.png");
+        background-size: cover;
+        background-position: center;
       }
     </style>
   </head>
@@ -247,8 +280,9 @@
 
     <main>
       <!-- Header -->
-      <section class="pt-32 md:pt-36 pb-12 px-6 md:px-12">
-        <div class="max-w-6xl 2xl:max-w-screen-xl mx-auto">
+      <section class="pt-32 md:pt-36 pb-12 px-6 md:px-12 mb-24 relative overflow-hidden rounded-2xl rates-hero-bg">
+        <div class="absolute inset-0 bg-gradient-to-b from-background/20 via-background/55 to-background"></div>
+        <div class="relative max-w-6xl 2xl:max-w-screen-xl mx-auto">
           <span class="font-label text-xs tracking-[0.3em] uppercase text-primary mb-6 block">Transparent Pricing</span>
           <h1 class="font-headline text-5xl md:text-7xl leading-[1.1] text-on-surface">
             Our Rates <span class="italic text-primary/80">in Paris.</span>
@@ -329,7 +363,7 @@
         <div class="max-w-6xl 2xl:max-w-screen-xl mx-auto grid grid-cols-1 lg:grid-cols-3 gap-8">
           <div class="bg-surface-container-low p-10 rounded-lg border border-neutral-800/30 overflow-hidden relative">
             <div class="absolute inset-0 opacity-20">
-              <img alt="Chauffeur Paris city ride pricing" class="w-full h-full object-cover" src="assets/home-hero.png" />
+            <img alt="Chauffeur Paris city ride pricing" class="w-full h-full object-cover" decoding="async" loading="lazy" src="assets/home-hero.png" />
             </div>
             <div class="relative">
               <div class="flex items-center justify-between mb-6">
@@ -365,7 +399,7 @@
 
           <div class="bg-surface-container-low p-10 rounded-lg border border-neutral-800/30 overflow-hidden relative">
             <div class="absolute inset-0 opacity-20">
-              <img alt="Hourly chauffeur service in Paris pricing" class="w-full h-full object-cover" src="assets/services-hero.jpg" />
+              <img alt="Hourly chauffeur service in Paris pricing" class="w-full h-full object-cover" decoding="async" loading="lazy" src="assets/services-hero.jpg" />
             </div>
             <div class="relative">
               <div class="flex items-center justify-between mb-6">
@@ -495,7 +529,7 @@
       <div class="pointer-events-none absolute -top-24 right-[-10%] h-64 w-64 rounded-full bg-amber-500/10 blur-3xl"></div>
       <div class="pointer-events-none absolute -bottom-32 left-[-5%] h-72 w-72 rounded-full bg-blue-500/10 blur-3xl"></div>
       <div class="max-w-7xl 2xl:max-w-screen-2xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-start md:justify-between gap-8 md:gap-14">
+        <div class="flex flex-col md:flex-row md:items-start md:justify-center gap-8 md:gap-24">
           <div class="flex flex-col gap-3 md:gap-4 max-w-lg">
             <a
               aria-label="VTC PARIS"
@@ -515,27 +549,27 @@
               <span>contact@vtcpariselite.com</span>
             </div>
           </div>
-          <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12">
-            <div>
+          <div class="grid grid-cols-2 md:grid-cols-3 gap-8 md:gap-12 md:justify-items-center">
+            <div class="md:text-center">
             <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Company</div>
-            <div class="flex flex-col gap-2 md:gap-3">
+              <div class="flex flex-col gap-2 md:gap-3 md:items-center">
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="about.html">About</a>
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="services.html">Services</a>
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="faq.html">FAQ</a>
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="contact.html">Contact</a>
             </div>
             </div>
-            <div>
+            <div class="md:text-center">
             <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Legal</div>
-            <div class="flex flex-col gap-2 md:gap-3">
+              <div class="flex flex-col gap-2 md:gap-3 md:items-center">
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Privacy Policy</a>
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Terms of Service</a>
               <a class="text-sm text-neutral-400 hover:text-amber-200 transition-colors" href="#">Chauffeur Login</a>
             </div>
             </div>
-            <div>
+            <div class="md:text-center">
             <div class="text-xs tracking-[0.35em] uppercase text-neutral-500 mb-2 md:mb-4">Follow</div>
-            <div class="flex gap-3 md:gap-4 mt-2 md:mt-0">
+              <div class="flex gap-3 md:gap-4 mt-2 md:mt-0 md:justify-center">
               <a
                 aria-label="WhatsApp"
                 class="text-amber-400/90 hover:text-amber-200 transition-colors"
@@ -570,7 +604,7 @@
             </div>
           </div>
         </div>
-        <div class="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-between gap-2 md:gap-4 border-t border-neutral-800/30 pt-4 md:pt-5">
+        <div class="mt-6 md:mt-8 flex flex-col md:flex-row items-center justify-center gap-2 md:gap-8 border-t border-neutral-800/30 pt-4 md:pt-5">
           <span class="text-[10px] tracking-widest uppercase text-neutral-500 text-center">&copy; 2024 VTC PARIS. All rights reserved.</span>
           <span class="text-[10px] text-neutral-600 text-center">Crafted for the Parisian Night.</span>
         </div>
